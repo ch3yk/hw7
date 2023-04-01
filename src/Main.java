@@ -45,9 +45,11 @@ public class Main {
         int year = 0;
         int birthInPopulation = (population/1000)*birthInOneThousand;
         int deathInPopulation = (population/1000)*deathInOneThousand;
-        while (year<12){
+        while (year<=10){
             System.out.println("Год "+ year +", численность населения составляет "+population);
             population= population+birthInPopulation-deathInPopulation;
+            birthInPopulation=(population/1000)*birthInOneThousand;
+            deathInPopulation=(population/1000)*deathInOneThousand;
             year++;
         }
     }
@@ -109,10 +111,8 @@ public class Main {
         int year=2023;
         int start=year-200;
         int end = year+100;
-        int comet= start;
-        while (comet>=start&&comet<=end){
-            comet++;
-            if(comet%79==0){
+        for (int comet=start;comet<=end;comet++){
+            if (comet%79==0){
                 System.out.println(comet);
             }
         }
