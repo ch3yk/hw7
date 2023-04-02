@@ -93,17 +93,9 @@ public class Main {
     }
     public static void task7 () {
         System.out.println("Задача 7");
-        int date=1;
-        int dayOfWeek=1;
-        while (date<31){
-            if (dayOfWeek==5){
-                System.out.println("Сегодня пятница "+date+"-е число. Необходимо подготовить отчет");
-            }
-            date++;
-            dayOfWeek++;
-            if (dayOfWeek==8){
-                dayOfWeek=1;
-            }
+        int date=4;
+        for (;date<=31;date=date+7){
+            System.out.println("Сегодня пятница, "+date+"-е число. Необходимо подготовить отчет");
         }
     }
     public static void task8 () {
@@ -111,11 +103,11 @@ public class Main {
         int year=2023;
         int start=year-200;
         int end = year+100;
-        for (int comet=start;comet<=end;comet++){
+        for (int comet=start;comet<=end;comet++,year = year+79){
             if (comet%79==0){
                 System.out.println(comet);
             }
         }
-
+// спасибо за понятное объяснение
     }
 }
